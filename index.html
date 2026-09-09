@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSET 2026 M&E Portal | Sta. Catalina Central School</title>
+    <style>
+        :root {
+            --primary-color: #003366; /* Professional Navy Blue */
+            --secondary-color: #0055a4; /* Lighter Blue for hover */
+            --accent-color: #f0b429; /* Gold/Yellow accent for highlights */
+            --bg-color: #f4f7f9;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --text-light: #666666;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .school-name {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .inset-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .theme {
+            font-size: 1.15rem;
+            font-style: italic;
+            max-width: 800px;
+            margin: 0 auto 1.5rem auto;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .portal-badge {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Main Content Styles */
+        main {
+            flex: 1;
+            max-width: 1000px;
+            width: 100%;
+            margin: 2.5rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .intro-text {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            color: var(--text-light);
+            font-size: 1.05rem;
+        }
+
+        .forms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Card Styles */
+        .form-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.8rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--primary-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            background-color: rgba(0, 51, 102, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .card-description {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .btn-form {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 0.85rem 1.2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-align: center;
+        }
+
+        .btn-form:hover {
+            background-color: var(--secondary-color);
+            transform: scale(1.02);
+        }
+
+        .btn-form svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            opacity: 0.95;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin: 0.2rem 0;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 600px) {
+            .inset-title {
+                font-size: 1.6rem;
+            }
+            .theme {
+                font-size: 1rem;
+            }
+            .forms-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="school-name">Sta. Catalina Central School</div>
+        <h1 class="inset-title">2026 In-Service Training (INSET)</h1>
+        <p class="theme">“Elevating Curriculum Excellence and Data-Driven Teaching for Transformative Learner Outcomes”</p>
+        <span class="portal-badge">Monitoring & Evaluation (M&E) Portal</span>
+    </header>
+
+    <main>
+        <p class="intro-text">
+            Welcome, educators! Please select your completed session below to accomplish the corresponding Monitoring and Evaluation (M&E) form. Your feedback is vital to our continuous improvement.
+        </p>
+
+        <div class="forms-grid">
+            <!-- Form 1 -->
+            <div class="form-card">
+                <div class="card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/></svg>
+                </div>
+                <h3 class="card-title">Utilization / Adaption of Classroom-Based Research to Improve Learners Performance</h3>
+                <p class="card-description">Evaluate the session on applying classroom-based research findings to enhance student learning outcomes and teaching strategies.</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQUItDU1BOHm5FX16qsg0kwWqvXML7xD1fot5fdmuhHf2n-Q/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="btn-form">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                    Accomplish M&E Form
+                </a>
+            </div>
+
+            <!-- Form 2 -->
+            <div class="form-card">
+                <div class="card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                </div>
+                <h3 class="card-title">Strengthening Learning Disability/ Difficulties Assessment Results under Project BRIDGE</h3>
+                <p class="card-description">Provide feedback on the assessment strategies and interventions discussed for learners with learning difficulties under Project BRIDGE.</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScfZCdudTYGmUdrBEIMizDJ-Zc8PDFXkNSJ6_ZUcpAXx4orMg/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="btn-form">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                    Accomplish M&E Form
+                </a>
+            </div>
+
+            <!-- Form 3 -->
+            <div class="form-card">
+                <div class="card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg>
+                </div>
+                <h3 class="card-title">From Sound to Print: Mastering Literacy with Phonemic Awareness and Phonics</h3>
+                <p class="card-description">Assess the effectiveness of the literacy training focused on phonemic awareness and phonics instruction methodologies.</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7BaLikZJ8BKiNgWY3h4DLHSykWSax38okRWCg5EdUDYtDTA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="btn-form">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                    Accomplish M&E Form
+                </a>
+            </div>
+
+            <!-- Form 4 -->
+            <div class="form-card">
+                <div class="card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                </div>
+                <h3 class="card-title">DepEd Order No. 007, s. 2024: Revised School-Based Management (SBM) System</h3>
+                <p class="card-description">Evaluate the orientation and discussions regarding the revised SBM system and its implications for school governance and operations.</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSf87ygmpduf25mrVI78UaMM7Y9P_uGOrS0DRiF6-nyGtsrPtw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="btn-form">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                    Accomplish M&E Form
+                </a>
+            </div>
+
+            <!-- Form 5 -->
+            <div class="form-card">
+                <div class="card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                </div>
+                <h3 class="card-title">Building Strong Numeracy Foundations through Contextualized ARAL Program Strategies</h3>
+                <p class="card-description">Share your insights on the contextualized strategies presented for improving numeracy skills under the ARAL Program.</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeN-Y1sNYSXTec4xLrsZbuwQy1hHQdpHxMgterJTJ6Ud2x-Aw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="btn-form">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                    Accomplish M&E Form
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p><strong>Sta. Catalina Central School</strong></p>
+        <p>&copy; 2026 In-Service Training (INSET) Committee. All rights reserved.</p>
+        <p style="font-size: 0.8rem; opacity: 0.8; margin-top: 0.5rem;">Elevating Curriculum Excellence and Data-Driven Teaching for Transformative Learner Outcomes</p>
+    </footer>
+
+</body>
+</html>
